@@ -1,0 +1,23 @@
+query {
+  searchTemporal(
+    first: 10
+    offset: 0
+    filter: {}
+    order: { sorting: DATE, sortingDiretion: ASC }
+    afterTime: "2020-09-29"
+  ) {
+    results {
+      __typename
+      ... on GraphContent {
+        name
+      }
+      ... on GraphGeneric {
+        names {
+          text
+          localizationTag
+        }
+      }
+    }
+    resultTotal
+  }
+}
