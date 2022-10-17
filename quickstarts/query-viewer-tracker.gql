@@ -1,0 +1,22 @@
+query {
+  viewer {
+    trackers(pageSize: 10) {
+      nextPageToken
+      trackers {
+        name
+        completedResources {
+          ... on GraphGeneric {
+            name
+          }
+        }
+        progressPercentage
+
+        resource {
+          ... on GraphGeneric {
+            name
+          }
+        }
+      }
+    }
+  }
+}

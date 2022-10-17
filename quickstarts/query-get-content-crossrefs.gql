@@ -1,0 +1,15 @@
+query {
+  getGraphGeneric(name: "[RESOURCE-NAME]") {
+    name
+    crossrefs {
+      externalID
+      kind
+      partial
+      namespace
+      key
+      website {
+        formattedAddress
+      }
+    }
+  }
+}

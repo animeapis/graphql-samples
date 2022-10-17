@@ -1,0 +1,35 @@
+query {
+  getGraphGeneric(name: "[CHARACTER-NAME]") {
+    name
+    names {
+      text
+      localizationTag
+    }
+    ... on GraphCharacter {
+      appearances {
+        relation
+        content {
+          ... on GraphGeneric {
+            name
+            names {
+              text
+              localizationTag
+            }
+          }
+        }
+      }
+      voices {
+        localizationTag
+        isPrimary
+        actor {
+          name
+        }
+        content {
+          ... on GraphGeneric {
+            name
+          }
+        }
+      }
+    }
+  }
+}

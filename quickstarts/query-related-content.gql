@@ -1,0 +1,19 @@
+query {
+  getGraphGeneric(name: "[RESOURCE-NAME]") {
+    name
+    ... on GraphContent {
+      relations {
+        type
+        object {
+          name
+          ... on GraphGeneric {
+            names {
+              text
+              localizationTag
+            }
+          }
+        }
+      }
+    }
+  }
+}

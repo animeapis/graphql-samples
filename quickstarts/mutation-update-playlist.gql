@@ -1,0 +1,10 @@
+mutation {
+  createPlaylistItem(
+    input: {
+      parent: "[PLAYTLIST]"
+      item: { resource: "[RESOURCE-NAME]" }
+    }
+  ) {
+    name
+  }
+}

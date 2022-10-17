@@ -1,0 +1,18 @@
+query {
+  getGraphGeneric(name: "[RESOURCE-NAME]") {
+    name
+    ... on Starring {
+      starring(filter: { relation: { eq: MAIN } }) {
+        character {
+          name
+          ... on GraphCharacter {
+            names {
+              text
+              localizationTag
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+query {
+  getCrossReferences(kind: Anime, namespace: ANIDB, id: "[EXTERNAL-ID]") {
+    ... on CrossReference {
+      resource {
+        ... on GraphGeneric {
+          name 
+          names {
+            text
+            localizationTag
+          }
+        }
+      }
+    }
+  }
+}

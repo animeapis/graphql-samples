@@ -1,0 +1,16 @@
+mutation {
+  createTracker(
+    input: {
+      parent: "[USER]"
+      tracker: {
+        resource: "[RESOURCE-NAME]"
+        name: ""
+        state: IN_PROGRESS
+        progressPercentage: 50
+      }
+    }
+  ) {
+    name
+    progressPercentage
+  }
+}

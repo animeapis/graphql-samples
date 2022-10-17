@@ -1,0 +1,19 @@
+query {
+  getGraphGeneric(name: "[RESOURCE-NAME]") {
+    name
+    ... on GraphGeneric {
+      coverImage {
+        url
+        annotations {
+          safeSearch {
+            adult
+            juvenile
+            racy
+            violence
+            medical
+          }
+        }
+      }
+    }
+  }
+}

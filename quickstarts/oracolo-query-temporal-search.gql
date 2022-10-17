@@ -1,0 +1,32 @@
+query {
+  searchTemporal(
+    first: 10
+    offset: 0
+    filter: {}
+    order: { sorting: DATE, sortingDiretion: ASC }
+    afterTime: "[DATE-FROM YYYY-MM-DD]"
+    beforeTime: "[DATE-TO YYYY-MM-DD]"
+  ) {
+    resultTotal
+    results {
+      ... on GraphGeneric {
+        entityType
+        name
+        names {
+          text
+          localizationTag
+        }
+      }
+      ... on GraphContent {
+        publishingType
+        original
+        status
+        releaseDate {
+          year
+          month
+          day
+        }
+      }
+    }
+  }
+}

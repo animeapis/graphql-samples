@@ -1,0 +1,25 @@
+query {
+  viewer {
+    playlists {
+      nextPageToken
+      playlists {
+        name
+        displayName
+        type
+        playlistItems(pageSize: 10) {
+          totalSize
+          nextPageToken
+          items {
+            name
+            createTime
+            resource {
+              ... on GraphGeneric {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

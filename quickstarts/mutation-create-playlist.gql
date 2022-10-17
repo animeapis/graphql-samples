@@ -1,0 +1,10 @@
+mutation {
+  createPlaylist(
+    input: {
+      parent: "[USER]"
+      playlist: { displayName: "What a pretty playlist", type: CUSTOM }
+    }
+  ) {
+    name
+  }
+}

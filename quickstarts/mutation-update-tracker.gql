@@ -1,0 +1,16 @@
+mutation {
+  updateTracker(
+    input: {
+      tracker: {
+        resource: "[RESOURCE-NAME]"
+        state: COMPLETED
+        name: "[TRACKER-NAME]"
+        progressPercentage: 100
+      }
+      updateMask: { paths: ["state", "progress_percentage"] }
+    }
+  ) {
+    name
+    progressPercentage
+  }
+}

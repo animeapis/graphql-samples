@@ -1,0 +1,28 @@
+query {
+  viewer {
+    name
+    displayName
+    discriminator
+    birthday {
+      day
+      month
+      year
+    }
+    locale
+    localeFallback
+    countryCode
+    gender
+    defaults {
+      albumProfile
+      albumBanner
+      playlistLiked
+      playlistLater
+    }
+    bannerImage {
+      url
+    }
+    profileImage {
+      url
+    }
+  }
+}
